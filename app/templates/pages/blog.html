@@ -1,14 +1,15 @@
 {% extends 'base.html/' %}
 {% load static %}
 
-{% block title %}Blog{% endblock title %}
+{% block title %}Blog{% endblock  %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'styles/blog.css' %}">
+<link rel="stylesheet" href="{% static 'styles/blog_responsive.css' %}">
+{% endblock %}
 
 {% block content %}
-<div class="super_container">
-{% include 'partials/_header.html' %}
-
 	<!-- Home -->
-
 	<div class="home">
 		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{{ STATIC_PREFIX }}images/blog.jpg" data-speed="0.8"></div>
 		<div class="home_container">
@@ -209,8 +210,8 @@
 			</div>
 		</div>		
 	</div>
+{% endblock %}
 
-
-	{% include 'partials/_footer.html' %}
-</div>
+{% block script %}
+<script src="{% static 'js/blog.js' %}"></script>
 {% endblock %}

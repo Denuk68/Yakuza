@@ -1,14 +1,14 @@
 {% extends 'base.html/' %}
 {% load static %}
+{% block title %}Home{% endblock%}
 
-{% block title %}Home{% endblock title %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'styles/main_styles.css' %}">
+<link rel="stylesheet" href="{% static 'styles/responsive.css' %}">
+{% endblock %}
 
 {% block content %}
-<div class="super_container">
-{% include 'partials/_header.html' %}
-
 	<!-- Home -->
-
 	<div class="home">
 		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{{ STATIC_PREFIX }}images/home.jpg"
 			data-speed="0.8"></div>
@@ -56,10 +56,10 @@
 					<div class="row">
 						<div class="col-xl-4 col-md-6 intro_col">
 							<div class="intro_image"><img src="{{ STATIC_PREFIX }}images/intro_1.jpg"
-									alt="https://unsplash.com/@quanle2819"></div>
+									></div>
 						</div>
 						<div class="col-xl-4 col-md-6 intro_col">
-							<div class="intro_image"><img src="{{ STATIC_PREFIX }}images/intro_2.jpg" alt="https://unsplash.com/@fabmag">
+							<div class="intro_image"><img src="{{ STATIC_PREFIX }}images/intro_2.jpg" >
 							</div>
 						</div>
 					</div>
@@ -69,7 +69,7 @@
 	</div>
 
 	<!-- Video -->
-
+<!-- 
 	<div class="video_section">
 		<div class="background_image" style="background-image:url(images/video.jpg)"></div>
 		<div class="video_section_content d-flex flex-column align-items-center justify-content-center text-center">
@@ -78,7 +78,7 @@
 					href="https://player.vimeo.com/video/99340873?autoplay=1&loop=1&title=0&autopause=0"><i
 						class="fa fa-play" aria-hidden="true"></i></a></div>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- Signature Dish -->
 
@@ -116,8 +116,9 @@
 				<div class="row">
 					<div class="col-lg-7 offset-lg-5">
 						<div class="sig_image">
-							<div class="background_image" style="background-image:url(images/sig.jpg)"></div>
-							<img src="{{ STATIC_PREFIX }}images/sig.jpg" alt="">
+							<div class="background_image">
+								<img src="{{ STATIC_PREFIX }}images/sig.jpg">
+							</div>							
 						</div>
 					</div>
 				</div>
@@ -482,7 +483,9 @@
 			</div>
 		</div>
 	</div>
-
-	{% include 'partials/_footer.html' %}
-</div>
 {% endblock %}
+
+{% block script %}
+<script src="{% static 'js/custom.js' %}"></script>
+{% endblock %}
+

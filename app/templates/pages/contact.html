@@ -1,14 +1,15 @@
 {% extends 'base.html/' %}
 {% load static %}
 
-{% block title %}Contact{% endblock title %}
+{% block title %}Contact{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'styles/contact.css' %}">
+<link rel="stylesheet" href="{% static 'styles/contact_responsive.css' %}">
+{% endblock %}
 
 {% block content %}
-<div class="super_container">
-{% include 'partials/_header.html' %}
-
 	<!-- Home -->
-
 	<div class="home">
 		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{{ STATIC_PREFIX }}images/contact.jpg" data-speed="0.8"></div>
 		<div class="home_container">
@@ -126,8 +127,8 @@
 			</div>
 		</div>		
 	</div>
+{% endblock %}
 
-
-	{% include 'partials/_footer.html' %}
-</div>
+{% block script %}
+<script src="{% static 'js/contact.js' %}"></script>
 {% endblock %}

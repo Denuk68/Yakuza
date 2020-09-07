@@ -1,14 +1,15 @@
 {% extends 'base.html/' %}
 {% load static %}
 
-{% block title %}Menu{% endblock title %}
+{% block title %}Menu{% endblock  %}
 
-{% block content %}
-<div class="super_container">
-{% include 'partials/_header.html' %}
-	
+{% block style %}
+<link rel="stylesheet" href="{% static 'styles/menu.css' %}">
+<link rel="stylesheet" href="{% static 'styles/menu_responsive.css' %}">
+{% endblock %}
+
+{% block content %}	
 	<!-- Home -->
-
 	<div class="home">
 		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{{ STATIC_PREFIX }}images/menu.jpg" data-speed="0.8"></div>
 		<div class="home_container">
@@ -475,8 +476,8 @@
 			</div>
 		</div>		
 	</div>
+{% endblock %}
 
-
-	{% include 'partials/_footer.html' %}
-</div>
+{% block script %}
+<script src="{% static 'js/menu.js' %}"></script>
 {% endblock %}
