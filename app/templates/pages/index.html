@@ -17,14 +17,12 @@
 			<div class="row">
 				<div class="col">
 					<div class="home_content text-center">
-						<div class="home_subtitle page_subtitle">The Venue is</div>
+						<div class="home_subtitle page_subtitle">Yakuza is</div>
 						<div class="home_title">
 							<h1>An Extraordinery Experience</h1>
 						</div>
 						<div class="home_text ml-auto mr-auto">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem
-								maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien.
-								Suspendisse cursus faucibus finibus.</p>
+							<p>Our restaurant employs the most experienced chefs from all over the country.</p>
 						</div>
 					</div>
 				</div>
@@ -46,19 +44,15 @@
 						<h2>An Extraordinery Experience</h2>
 					</div>
 					<div class="intro_text">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem
-							maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse
-							cursus faucibus finibus. Ut non justo eleifend, facilisis nibh ut, interdum odio.
-							Suspendisse potenti. Vivamus luctus diam eu neque rutrum, vitae aliquet dolor
-							venenatis. Nulla consequat fringilla massa.</p>
+						<p>Our restaurant employs the most experienced chefs from all over the country. Due to the coronavirus pandemic, we started working to order at home. You can either book a table and visit our restaurant, or order with home delivery. We work for you. Your "Yakuza".</p>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xl-4 col-md-6 intro_col">
-						<div class="intro_image"><img src="{{ STATIC_PREFIX }}images/intro_1.jpg"></div>
+						<div class="intro_image"><img src="{{ STATIC_PREFIX }}images/intro_0.jpg"></div>
 					</div>
 					<div class="col-xl-4 col-md-6 intro_col">
-						<div class="intro_image"><img src="{{ STATIC_PREFIX }}images/intro_2.jpg">
+						<div class="intro_image"><img src="{{ STATIC_PREFIX }}images/intro_3.jpg">
 						</div>
 					</div>
 				</div>
@@ -160,7 +154,7 @@
 							</div>
 							<div class="dish_contents">
 								<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
-									<li>{{item.description}}</li>									
+									<li>{{item.description}}</li>
 								</ul>
 							</div>
 							<div class="dish_order"><a href="#">Order Now</a></div>
@@ -187,7 +181,7 @@
 							</div>
 							<div class="dish_contents">
 								<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
-									<li>{{item.description}}</li>									
+									<li>{{item.description}}</li>
 								</ul>
 							</div>
 							<div class="dish_order"><a href="#">Order Now</a></div>
@@ -205,18 +199,19 @@
 
 						<!-- Dish -->
 						{% for item in dessert %}
-						<div class="dish">					
-							<div class="dish_title_container d-flex flex-xl-row flex-column align-items-start justify-content-start">
+						<div class="dish">
+							<div
+								class="dish_title_container d-flex flex-xl-row flex-column align-items-start justify-content-start">
 								<div class="dish_title">{{item.name}}</div>
 								<div class="dish_price">{{item.price}}$</div>
 							</div>
 							<div class="dish_contents">
 								<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
-									<li>{{item.description}}</li>									
+									<li>{{item.description}}</li>
 								</ul>
 							</div>
 							<div class="dish_order"><a href="#">Order Now</a></div>
-						</div>						
+						</div>
 						{% endfor %}
 					</div>
 				</div>
