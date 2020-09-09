@@ -29,3 +29,11 @@ def contact(request):
 
 def elements(request):
     return render(request, 'pages/elements.html')
+
+def delivery(request):
+    context = {
+        "pizza": Food.objects.filter(food_type="Pizza"),
+        "sushi": Food.objects.filter(food_type='Sushi'),
+        "dessert": Food.objects.filter(food_type='Dessert'),
+    }
+    return render(request, 'pages/delivery.html', context)

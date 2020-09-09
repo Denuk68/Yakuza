@@ -1,0 +1,70 @@
+{% extends 'base.html/' %}
+{% load static %}
+{% block title %}Delivery{% endblock%}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'styles/main_styles.css' %}">
+<link rel="stylesheet" href="{% static 'styles/responsive.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Home -->
+<div class="home">
+	<div class="parallax_background parallax-window" data-parallax="scroll"
+		data-image-src="{{ STATIC_PREFIX }}images/home.jpg" data-speed="0.8"></div>
+	<div class="home_container">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="home_content text-center">
+						<div class="home_subtitle page_subtitle">Yakuza is</div>
+						<div class="home_title">
+							<h1>An Extraordinery Experience</h1>
+						</div>
+						<div class="home_text ml-auto mr-auto">
+							<p>Our restaurant employs the most experienced chefs from all over the country.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="scroll_icon"></div>
+</div>
+<div class="container">
+        <div class="col-lg-4 themenu_column">
+				<div class="themenu_col">
+					<div class="themenu_col_title">Delivery</div>
+					<div class="dish_list">
+
+						<!-- Dish -->
+						{% for item in pizza %}
+						<div class="dish">
+							<div
+								class="dish_title_container d-flex flex-xl-row flex-column align-items-start justify-content-start">
+								<div class="dish_title">Pizza Polo</div>
+								<div class="dish_price">20$</div>
+							</div>
+							<div class="dish_contents">
+								<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
+									<li>Cheese , tomato , meet </li>
+								</ul>
+							</div>
+						</div>
+						{% endfor %}
+
+                    </div>
+                    <i class="fa fa-money-check fa-3x"></i>
+                    <button class="btn_delivery">
+                       Pay</button>
+                       <i class="fa fa-money-check-alt fa-3x"></i>
+				</div>
+			</div>
+
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'js/custom.js' %}"></script>
+{% endblock %}
