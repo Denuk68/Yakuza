@@ -31,6 +31,18 @@
 	src: url(../font/edwardian_script_itc.ttf) format('truetype'),
 	url(../font/edwardian_script_itc.otf) format('opentype');
 }
+@font-face
+{
+	font-family: 'Yakuza';
+	src: url(../font/Yakuza.otf) format('truetype'),
+	url(../font/Yakuza.otf) format('opentype');
+}
+@font-face
+{
+	font-family: 'Logo';
+	src: url(../font/Logo.otf) format('truetype'),
+	url(../font/Logo.otf) format('opentype');
+}
 
 /*********************************
 2. Body and some general stuff
@@ -365,6 +377,9 @@ section
 	line-height: 0.75;
 	margin-top: 12px;
 }
+.header_logo_title{
+	font-family: "Logo";
+}
 .main_nav
 {
 	margin-left: 170px;
@@ -695,7 +710,7 @@ section
 	-o-transform: translateY(-50%);
 	transform: translateY(-50%);
 	right: -165px;
-	width: 679px;
+	width: 650px;
 	background: #FFFFFF;
 	border: solid 2px #b49383;
 	box-shadow: 0px 45px 70px rgba(0,0,0,0.24);
@@ -1139,7 +1154,8 @@ section
 }
 .footer_logo_title
 {
-	font-size: 57px;
+	font-family: "Logo";
+	font-size: 45px;
 	line-height: 0.75;
 	color: #FFFFFF;
 }
