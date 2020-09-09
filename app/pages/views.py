@@ -1,12 +1,12 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Food
+from .models import Pizza, Sushi, Dessert
 
 
 def index(request):
     context = {
-        "pizza": Food.objects.filter(food_type="Pizza"),
-        "sushi": Food.objects.filter(food_type='Sushi'),
-        "dessert": Food.objects.filter(food_type='Dessert'),
+        "pizza": Pizza.objects.all(),
+        "sushi": Sushi.objects.all(),
+        "dessert": Dessert.objects.all(),
     }
     return render(request, 'pages/index.html', context)
 
