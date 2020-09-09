@@ -806,7 +806,6 @@ section
 }
 .sig_image img
 {
-	display: none;
 	max-width: 100%;
 }
 .sig_content_container
