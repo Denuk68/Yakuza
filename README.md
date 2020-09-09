@@ -27,7 +27,7 @@ Django project
 Для чого: запобігає конфліктам при наступних Pull Requests з робочої гілки в головну гілку.  
 
 1. Зберегти зміни і надіслати зміни в гілку (див. попередній пункт)
-2. `git checkout UI_Ref`
+2. `git checkout master`
 3. `git pull`
 4. `git checkout <своя гілка>`
-5. `git merge UI_Ref` # мержим UI_Ref собі в гілку
+5. `git merge master` # мержим master собі в гілку
