@@ -33,12 +33,6 @@
 }
 @font-face
 {
-	font-family: 'Yakuza';
-	src: url(../font/Yakuza.otf) format('truetype'),
-	url(../font/Yakuza.otf) format('opentype');
-}
-@font-face
-{
 	font-family: 'Logo';
 	src: url(../font/Logo.otf) format('truetype'),
 	url(../font/Logo.otf) format('opentype');
