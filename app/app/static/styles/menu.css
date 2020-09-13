@@ -29,6 +29,12 @@
 	src: url(../font/edwardian_script_itc.ttf) format('truetype'),
 	url(../font/edwardian_script_itc.otf) format('opentype');
 }
+@font-face
+{
+	font-family: 'Logo';
+	src: url(../font/Logo.otf) format('truetype'),
+	url(../font/Logo.otf) format('opentype');
+}
 
 /*********************************
 2. Body and some general stuff
@@ -374,6 +380,9 @@ section
 	letter-spacing: 0.680em;
 	line-height: 0.75;
 	margin-top: 12px;
+}
+.header_logo_title{
+	font-family: "Logo";
 }
 .main_nav
 {
@@ -907,7 +916,8 @@ section
 }
 .footer_logo_title
 {
-	font-size: 57px;
+	font-family: "Logo";
+	font-size: 45px;
 	line-height: 0.75;
 	color: #FFFFFF;
 }
