@@ -18,7 +18,13 @@ def about(request):
 
 
 def menu(request):
-    return render(request, 'pages/menu.html')
+
+    context = {
+        "pizza": Pizza.objects.all(),
+        "sushi": Sushi.objects.all(),
+        "dessert": Dessert.objects.all(),   
+    }
+    return render(request, 'pages/menu.html', context)
 
 
 def blog(request):
