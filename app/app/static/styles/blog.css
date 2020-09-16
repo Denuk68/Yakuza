@@ -608,7 +608,7 @@ section
 .blog
 {
 	width: 100%;
-	background: #FFFFFF;
+	background: #101010;
 	padding-top: 195px;
 	padding-bottom: 102px;
 }
@@ -643,15 +643,15 @@ section
 	top: -24px;
 	width: 136px;
 	height: 48px;
-	background: #FFFFFF;
+	background: #101010;
 	text-align: center;
-	border: solid 2px #c4ab9f;
+	border: solid 2px #800008;
 }
 .blog_post_date a
 {
 	display: block;
 	font-size: 16px;
-	color: #232323;
+	color: #FFFFFF;
 	line-height: 44px;
 }
 .blog_post_content
@@ -666,12 +666,12 @@ section
 .blog_post_title a
 {
 	font-size: 36px;
-	color: #232323;
+	color: #FFFFFF;
 	line-height: 1.2;
 }
 .blog_post_title a:hover
 {
-	color: #c4ab9f;
+	color: #800008;
 }
 .blog_post_info
 {
@@ -682,7 +682,7 @@ section
 {
 	width: 100%;
 	height: 30px;
-	background: #c4ab9f;
+	background: #800008;
 	padding-left: 23px;
 	padding-right: 26px;
 }
@@ -694,7 +694,7 @@ section
 }
 .blog_post_info ul li a:hover
 {
-	color: #232323;
+	color: #FF6347;
 }
 .blog_post_info ul li
 {
@@ -711,6 +711,12 @@ section
 {
 	margin-top: 32px;
 }
+
+.blog_post_text p
+{
+	color: #FFFFFF;
+}
+
 .load_more_row
 {
 	margin-top: 70px;
@@ -719,12 +725,12 @@ section
 {
 	width: 216px;
 	height: 48px;
-	background: #c4ab9f;
-	border: solid 2px #c4ab9f;
+	background: #101010;
+	border: solid 2px #800008;
 }
 .load_more_button:hover
 {
-	background: transparent;
+	background: #800008;
 }
 .load_more_button a
 {

@@ -608,20 +608,26 @@ section
 .contact
 {
 	width: 100%;
-	background: #FFFFFF;
+	background: #101010;
 	padding-top: 116px;
 	padding-bottom: 103px;
 }
 .contact_title
 {
 	font-size: 36px;
-	color: #232323;
+	color: #FFFFFF;
 	line-height: 0.75;
 }
 .contact_text
 {
 	margin-top: 40px;
 }
+
+.contact_text p
+{
+	color: #FFFFFF;
+}
+
 .contact_logo_container
 {
 	margin-top: 59px;
@@ -630,13 +636,13 @@ section
 {
 	font-size: 63px;
 	line-height: 0.75;
-	color: #232323;
+	color: #FFFFFF;
 }
 .contact_logo_subtitle
 {
 	font-size: 21px;
 	text-transform: uppercase;
-	color: #232323;
+	color: #FFFFFF;
 	letter-spacing: 0.680em;
 	line-height: 0.75;
 	margin-top: 19px;
@@ -646,7 +652,7 @@ section
 	padding-top: 39px;
 	padding-bottom: 41px;
 	margin-top: 38px;
-	border: solid 2px #c49a8f;
+	border: solid 2px #800008;
 }
 .contact_list_content
 {
@@ -668,13 +674,13 @@ section
 {
 	width: 87px;
 	font-size: 20px;
-	color: #232323;
+	color: #FFFFFF;
 	line-height: 0.75;
 }
 .contact_list li > div:last-child
 {
 	font-size: 15px;
-	color: #838383;
+	color: #FFFFFF;
 	line-height: 1.6;
 	margin-top: -3px;
 }
@@ -690,7 +696,7 @@ section
 {
 	padding: 5px;
 	font-size: 14px;
-	color: #838383;
+	color: #FFFFFF;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -699,7 +705,7 @@ section
 }
 .contact_social ul li a i:hover
 {
-	color: #c4ab9f;
+	color: #800008;
 }
 .google_map_row
 {
