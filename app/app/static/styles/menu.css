@@ -316,8 +316,10 @@ section
 }
 .section_title h1
 {
+	color: #FFFFFF;
 	font-size: 48px;
 }
+
 
 /*********************************
 3. Header
@@ -627,6 +629,11 @@ section
 {
 	margin-top: 24px;
 }
+
+.themenu_text p{
+	color: #FFFFFF;
+}
+
 .themenu_row
 {
 	margin-top: 93px;
@@ -676,7 +683,7 @@ section
 .dish_price
 {
 	font-size: 18px;
-	color: #232323;
+	color: #FFFFFF;
 }
 .dish_price
 {
@@ -689,7 +696,6 @@ section
 .dish_contents ul li
 {
 	font-size: 14px;
-	color: #636363;
 }
 .dish_contents ul li:not(:last-child)::after
 {
