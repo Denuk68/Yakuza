@@ -2,62 +2,39 @@ from django.db import models
 from datetime import datetime
 
 
-class Pizza(models.Model):
-    name = models.CharField("Назва страви", max_length=50)
-    price = models.IntegerField("Ціна страви")
-    description = models.TextField("Опис страви", max_length=250)
-    image = models.ImageField(upload_to='Pizza/%Y/%m/%d/')
-    
 
+class Category(models.Model):
+    name = models.CharField(verbose_name='Тип блюда', max_length=100, db_index= True)
+    slug = models.SlugField(max_length=100, unique=True)
+
+    class Meta:
+        ordering = ('name',)
+        verbose_name = 'Категория'
+        verbose_name_plural = 'Категории'
+        
     def __str__(self):
         return self.name
 
-    class Meta:        
-        verbose_name = 'Pizza'
-        verbose_name_plural = 'Pizza'
 
 
-class Sushi(models.Model):
-    name = models.CharField("Назва страви", max_length=50)
-    price = models.IntegerField("Ціна страви")
-    description = models.TextField("Опис страви", max_length=250)
-    image = models.ImageField(upload_to='Sushi/%Y/%m/%d/')
-   
-    
+class Product(models.Model):
+    category = models.ForeignKey(Category,verbose_name='Категория', related_name='products', on_delete=models.CASCADE)
+    name = models.CharField(verbose_name='Название блюда', max_length=150, db_index= True)
+    slug = models.CharField(max_length=150, db_index= True, unique=True)
+    image = models.ImageField(upload_to='product/%Y/%m/%d/')
+    description = models.TextField(verbose_name='Описание блюда', max_length=1000)
+    price = models.DecimalField(verbose_name='Цена блюда',max_digits=10, decimal_places=2)
+    available = models.BooleanField(verbose_name='Наличие блюда', default= True)
+    new  = models.BooleanField(verbose_name="Новое блюдо", default= False)
 
+
+    class Meta:
+        ordering = ('name',)
+        verbose_name = 'Блюдо'
+        verbose_name_plural = 'Блюда'
+        index_together = (('id', 'slug'), )
+        
     def __str__(self):
-        return self.name
+        return self.name    
 
-    class Meta:        
-        verbose_name = 'Sushi'
-        verbose_name_plural = 'Sushi'
-
-
-class Dessert(models.Model):
-    name = models.CharField("Назва страви", max_length=50)
-    price = models.IntegerField("Ціна страви")
-    description = models.TextField("Опис страви", max_length=250)
-    image = models.ImageField(upload_to='Dessert/%Y/%m/%d/')
-    
-
-    def __str__(self):
-        return self.name
-
-    class Meta:        
-        verbose_name = 'Dessert'
-        verbose_name_plural = 'Dessert'
-
-
-class New(models.Model):
-    name = models.CharField("Назва страви", max_length=50)
-    price = models.IntegerField("Ціна страви")
-    description = models.TextField("Опис страви", max_length=250)
-    image = models.ImageField(upload_to='New/%Y/%m/%d/')
-    
-
-    def __str__(self):
-        return self.name
-
-    class Meta:        
-        verbose_name = '1. New Dishes'
-        verbose_name_plural = '1. New Dishes'
+        

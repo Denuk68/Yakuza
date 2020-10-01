@@ -1,28 +1,18 @@
 from django.contrib import admin
-from .models import Pizza, Sushi, Dessert, New
+from .models import Category, Product
 
 
-class PizzaAdmin(admin.ModelAdmin):
-    list_display = ('name', 'price', 'description', 'image')
-    list_display_links = ('name', 'price', 'description')
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('name', 'slug')
+    prepopulated_fields = {'slug':('name', )}
 
 
-class SushiAdmin(admin.ModelAdmin):
-    list_display = ('name', 'price', 'description', 'image')
-    list_display_links = ('name', 'price', 'description')
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ('category','name',  'price', 'available', 'new')
+    list_display_links = ['name']
+    list_filter = ['available', 'new','category']
+    list_editable = ('price', 'available', 'new')
+    prepopulated_fields = {'slug':('name', )}
 
-
-class DessertAdmin(admin.ModelAdmin):
-    list_display = ('name', 'price', 'description', 'image')
-    list_display_links = ('name', 'price', 'description')
-    
-
-class NewAdmin(admin.ModelAdmin):
-    list_display = ('name', 'price', 'description', 'image')
-    list_display_links = ('name', 'price', 'description')
-
-
-admin.site.register(Pizza, PizzaAdmin)
-admin.site.register(Sushi, SushiAdmin)
-admin.site.register(Dessert, DessertAdmin)
-admin.site.register(New, NewAdmin)
