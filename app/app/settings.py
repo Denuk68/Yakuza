@@ -35,7 +35,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "pages",
+    'pages',
+    'cart',
 ]
 
 MIDDLEWARE = [
@@ -124,3 +125,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, STATIC_URL, 'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'app/static'),
 ]
+
+CART_SESSION_ID = 'cart'
+

@@ -82,7 +82,13 @@
 									<li>{{item.description}}</li>
 								</ul>
 							</div>
-							<div class="dish_order"><a href="#">Order Now</a></div>
+							<div class="dish_order">
+								<form action="{% url 'cart:cart_add' item.id %}" method="post">
+									{{ cart_product_form }}
+									{% csrf_token %}
+									<input type="submit" value="Add to cart">
+								</form>
+							</div>
 						</div>
 						{% endfor %}
 
@@ -113,7 +119,13 @@
 									<li>{{item.description}}</li>
 								</ul>
 							</div>
-							<div class="dish_order"><a href="#">Order Now</a></div>
+							<div class="dish_order">
+								<form action="{% url 'cart:cart_add' item.id %}" method="post">
+									{{ cart_product_form }}
+									{% csrf_token %}
+									<input type="submit" value="Add to cart">
+								</form>
+							</div>
 						</div>
 						{% endfor %}
 
@@ -143,7 +155,13 @@
 									<li>{{item.description}}</li>
 								</ul>
 							</div>
-							<div class="dish_order"><a href="#">Order Now</a></div>
+							<div class="dish_order">
+								<form action="{% url 'cart:cart_add' item.id %}" method="post">
+									{{ cart_product_form }}
+									{% csrf_token %}
+									<input type="submit" value="Add to cart">
+								</form>
+							</div>
 						</div>
 						{% endfor %}
 
