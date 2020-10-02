@@ -645,6 +645,7 @@ section
 }
 .themenu_image img
 {
+	height: 300px;
 	max-width: 100%;
 }
 .themenu_col
