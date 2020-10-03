@@ -522,7 +522,7 @@ section {
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	background: rgba(180, 147, 131, 0.97);
+	background: #101010;
 	z-index: 101;
 	visibility: hidden;
 	opacity: 0;
@@ -703,6 +703,7 @@ section {
 
 .chef_image img {
 	max-width: 100%;
+	height: 350px;
 }
 
 .chef_content {
