@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pages',
     'cart',
+    'orders',
 ]
 
 MIDDLEWARE = [
@@ -127,4 +128,3 @@ STATICFILES_DIRS = [
 ]
 
 CART_SESSION_ID = 'cart'
-
