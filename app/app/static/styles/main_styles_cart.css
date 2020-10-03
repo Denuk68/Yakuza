@@ -332,4 +332,14 @@ h1 {
     color: #fff;
     margin: 50px 0;
 }
+.order-form p label{
+    color: #fff; 
+    font-size: 18px;
+}
+.order-form p input{
+    cursor: pointer;
+}
 
+p.thank{
+    color: #fff;
+}

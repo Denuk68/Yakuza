@@ -1,4 +1,2 @@
 /env
-/app/app/__pycache__
-/app/pages/__pycache__
-/app/pages/migrations/__pycache__
+__pycache__
