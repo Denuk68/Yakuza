@@ -973,3 +973,20 @@ section
 {
 	white-space: nowrap;
 }
+
+.dish_order input.cart_input{
+    border: 1px #8b0000 solid;
+    background-color: #000;
+    color: #fff;
+    letter-spacing: 0.4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.dish_order select{
+    border: 1px #8b0000 solid;
+    background-color: #000;
+    color: #fff;
+    letter-spacing: 0.4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}

@@ -86,7 +86,7 @@
 								<form action="{% url 'cart:cart_add' item.id %}" method="post">
 									{{ cart_product_form }}
 									{% csrf_token %}
-									<input type="submit" value="Add to cart">
+									<input type="submit" value="Add to cart"  class="cart_input"> 
 								</form>
 							</div>
 						</div>
@@ -123,7 +123,7 @@
 								<form action="{% url 'cart:cart_add' item.id %}" method="post">
 									{{ cart_product_form }}
 									{% csrf_token %}
-									<input type="submit" value="Add to cart">
+									<input type="submit" value="Add to cart"  class="cart_input">
 								</form>
 							</div>
 						</div>
@@ -159,7 +159,7 @@
 								<form action="{% url 'cart:cart_add' item.id %}" method="post">
 									{{ cart_product_form }}
 									{% csrf_token %}
-									<input type="submit" value="Add to cart">
+									<input type="submit" value="Add to cart" class="cart_input">
 								</form>
 							</div>
 						</div>
